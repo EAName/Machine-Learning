@@ -77,5 +77,5 @@ Machine-Learning/
 
 ---
 
-**Course context:** Northwestern University, M.S. in Data Science, Data Engineering specialization (MSDS 422)  
+**Course context:** Northwestern University, M.S. in Data Science, Data Engineering specialization  
 **Repository:** https://github.com/EAName/Machine-Learning
