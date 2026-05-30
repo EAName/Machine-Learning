@@ -26,11 +26,7 @@ Northwestern University M.S. in Data Science (Data Engineering specialization): 
 - **Convolutional neural networks:** Conv2D + MaxPooling stacks vs. dense baselines on pickled image tensors; train/validation split; softmax binary classification (`Deep Learning with Convolutional Neural Networks.ipynb`)
 - **Model inference on new images:** load saved Keras model (`TFNN.pet.model`); preprocess and score held-out pet imagery (`Applying CNN to New Data.ipynb`)
 
-**Course syllabus topic not represented in committed artifacts:** recurrent neural networks (no RNN/LSTM notebooks in this repository)
-
 **Data dependencies:** coursework CSVs (`HMEQ_Loss.csv`, `Steam_Linear_Data.csv`, `Steam_Logit_Data.csv`, `IRIS.csv`), image directories, pickle tensors, and saved Keras models are referenced in notebooks but not bundled in the repository
-
-**Out of scope for this repo:** production BigQuery ML serving (see **Analytics-Applications-Engineering**); inferential statistics in R (see **Statistics**); prescriptive LP/simulation (see **Decision-Analytics**); algorithm fundamentals without ML framing (see **Data-Engineering-Algorithms**); large-scale cloud feature pipelines (see **Systems-Engineering**, **Data-Miners**).
 
 ---
 
