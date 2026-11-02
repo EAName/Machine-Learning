@@ -11,7 +11,24 @@ Northwestern University M.S. in Data Science (Data Engineering specialization): 
 
 ---
 
-## 2. Concepts and Methods
+## 2. Featured Project: Deep Learning with Artificial Neural Networks for Home Equity Line of Credit
+
+**Abstract:** Predictive models for loan risk management on the HMEQ dataset: classifying which borrowers default and estimating the dollar loss when they do. TensorFlow neural networks were compared against decision trees, Random Forest, Gradient Boosting, and regression models on the same 80/20 train/test split to choose an approach for operational deployment.
+
+**Methodology:** TensorFlow models were built with ReLU, Tanh, SELU, and ELU activations, one or two hidden layers, and 20% dropout. Default prediction was evaluated by test accuracy and loss prediction by RMSE in dollars.
+
+**Findings:**
+
+1. **Default prediction:** TensorFlow reached 86.0% to 86.9% test accuracy across configurations, and adding a second hidden layer changed accuracy by less than one point. Random Forest led all models at 90.9%, followed by Gradient Boosting at 89.7%.
+2. **Loss prediction:** Gradient Boosting had the lowest RMSE at $1,826, followed by TensorFlow with SELU at $2,041 and Random Forest at $2,230. TensorFlow was unstable: two identically configured SELU runs differed by about $390 in RMSE.
+
+**Recommendation:** Random Forest for default classification and Gradient Boosting for loss estimation. Both outperformed the neural networks, produced stable results across runs, and are simpler to train, explain, and maintain in a regulated lending environment. Together they let the organization flag high-risk borrowers, size expected losses, and tune credit policy accordingly.
+
+Results are from the saved outputs in `Deep Learning with Artificial Neural Networks.ipynb`.
+
+---
+
+## 3. Concepts and Methods
 
 - **ML framework and tabular EDA:** load and inspect loan default datasets (`HMEQ_Loss.csv`); target variables for bad-flag classification and loss amount regression; missing-value and feature exploration (`Machine Learning.ipynb`)
 - **Linear and logistic regression:** OLS on steam heating data with R² and MSE; logistic regression on steam logit data (`Linear_Logistic_Regression.ipynb`)
@@ -30,7 +47,7 @@ Northwestern University M.S. in Data Science (Data Engineering specialization): 
 
 ---
 
-## 3. Stack
+## 4. Stack
 
 | Layer | Tools |
 |-------|-------|
@@ -45,7 +62,7 @@ Northwestern University M.S. in Data Science (Data Engineering specialization): 
 
 ---
 
-## 4. Structure
+## 5. Structure
 
 ```
 Machine-Learning/
