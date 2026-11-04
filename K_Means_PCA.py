@@ -10,7 +10,7 @@ import seaborn as sns
 
 from sklearn.cluster import KMeans
 from sklearn.metrics import silhouette_score
-from sklearn.metrics import calinski_harabaz_score
+from sklearn.metrics import calinski_harabasz_score
 
 
 import warnings
@@ -92,7 +92,7 @@ for K in range(3,12) :
     K_LIST.append( K )
     I_LIST.append( km.inertia_ )
     S_LIST.append( silhouette_score(X_TRN,km.labels_) )
-    C_LIST.append( calinski_harabaz_score(X_TRN,km.labels_) )
+    C_LIST.append( calinski_harabasz_score(X_TRN,km.labels_) )
 
 
 def drawElbow( K, SCORE, LABEL ) :
@@ -122,7 +122,7 @@ def clusterData( DATA, TRN_DATA, K, TARGET ) :
     print( DATA.head() )
 
     G = DATA.groupby("CLUSTER")
-    print( G.mean() )
+    print( G.mean( numeric_only=True ) )
     print("\n\n\n")
     print( G[ TARGET ].value_counts() )
 
